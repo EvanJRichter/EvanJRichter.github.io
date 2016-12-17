@@ -1,0 +1,1 @@
+$(document).ready(function(){$("body").click(function(){$(this).toggleClass("llama")})}),$(window).scroll(function(a){var b=$(document).scrollTop().valueOf();b>$("#about").height()?($(".navbar").addClass("barShrink"),console.log(b)):$(".navbar").removeClass("barShrink")});
