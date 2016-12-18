@@ -36,6 +36,10 @@ app.controller('myListController', ['$scope', '$http',  function($scope, $http) 
 
 }]);
 
+app.controller('myMainController', ['$scope', function($scope){
+
+}]);
+
 app.controller('myGalleryController', ['$scope', '$http',  function($scope, $http){
     $scope.movieList = null;
 
@@ -47,6 +51,7 @@ app.controller('myGalleryController', ['$scope', '$http',  function($scope, $htt
 	  	console.log(err);
 	  });
 }]);
+
 
 app.controller('myDetailsController', ['$scope', '$http', '$routeParams', '$filter',  function($scope, $http, $routeParams, $filter) {
     $scope.movieId = $routeParams.movie_id;

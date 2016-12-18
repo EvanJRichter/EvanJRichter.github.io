@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>MP3 Starter</title>
+    <title>Evan Richter</title>
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link href="css/navbar-fixed-side.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://use.typekit.net/hpa7jwq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
-<body ng-app="mp3">
-
-    <div class="row">
-        <div class="small-6 small-centered columns">
-            <a href="./#/list" class="button round float-left">Search</a>
-            <a href="./#/gallery" class="button round float-right">Gallery</a>   
+<body ng-app="siteapp">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-lg-2">
+                <nav class="navbar navbar-default navbar-fixed-side">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./">Evan Richter</a>
+                    </div>
+                    <div class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#/projects">Projects</a></li>
+                                    <li><a href="www.github.com/EvanJRichter">Github</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Art / Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#/design">Design</a></li>
+                                    <li><a href="#/photography">Photography</a></li>
+                                    <li><a href="#/artwork">Artwork</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Comedy<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#/videos">Videos</a></li>
+                                    <li><a href="#/writing">Writing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-9 col-lg-10 ">
+                <div ng-view class="content"></div>
+            </div>
         </div>
-    </div>
-        
+    </div> 
+    <!-- <div id="grad"></div> -->
 
-    <div ng-view></div>
 
 
     <!-- Angular Scripts -->
@@ -31,11 +71,8 @@
 
     <!-- Scripts -->
     <script src="./lib/jquery/dist/jquery.min.js"></script>
-    <script src="./lib/foundation-sites/dist/foundation.min.js"></script>
     <script src="./js/script.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
